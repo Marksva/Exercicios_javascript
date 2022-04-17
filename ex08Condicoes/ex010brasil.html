@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+        body{
+            background: cornflowerblue;
+            font: normal 18px Arial;
+            color: white;
+            text-align: center;
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    Qual o seu País? <input type="text" name="txtn1" id="txtn1">
+    <input type="button" value="verificar" onclick="verificar()">
+    <div id="res">
+
+    </div>
+    <a href="index.html"><img src="botao/voltar-90.png" alt=""></a>
+
+    <script>
+        function verificar(){
+            var n1 = document.querySelector('input#txtn1')
+            var n = String(n1.value)
+            var res = document.querySelector('div#res')
+            if (n == 'Brasil' || n == 'brasil') {
+                res.innerHTML = `<p>Você é Brasileiro</p>`
+            } else {
+                res.innerHTML = `<p>Voce é Estrangeiro</p>`
+            }
+
+        }
+    </script>
+</body>
+</html>
